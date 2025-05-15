@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  background-color: #2e2e2e; /* cinza escuro */
+  color: #f0f0f0; /* branco suave */
+}
+
+a {
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+.hero {
+  background: linear-gradient(135deg, #4a4a4a, #1c1c1c); /* degradê cinza escuro para quase preto */
+  color: #eaeaea;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #f5f5f5;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  background-color: #3a3a3a; /* cinza médio */
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.section.left .text { order: 1; }
+.section.left .image { order: 2; }
+
+.section.right .text { order: 2; }
+.section.right .image { order: 1; }
+
+.section .text {
+  max-width: 500px;
+  padding: 20px;
+  color: #dcdcdc; /* cinza claro */
+}
+
+.section .image img {
+  width: 300px;
+  border-radius: 12px;
+  transition: transform 0.3s;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+}
+
+.section .image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+
+ul {
+  list-style-type: "► ";
+  padding-left: 20px;
+  color: #dcdcdc;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #424242; /* cinza escuro */
+  color: #eee;
+}
+
+th, td {
+  border: 1px solid #666;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #555555; /* cinza mais escuro */
+  color: #fafafa;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 2px solid #666;
+  border-radius: 6px;
+  background-color: #404040;
+  color: #f0f0f0;
+  font-family: 'Fira Code', monospace;
+}
+
+input:focus, textarea:focus {
+  border-color: #81a1c1; /* azul acinzentado */
+  outline: none;
+  background-color: #4a4a4a;
+}
+
+button {
+  background-color: #606060;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #81a1c1; /* azul acinzentado para hover */
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: #bbb;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section .text, 
+  .section .image {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .section .image img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  input, textarea, button {
+    font-size: 16px;
+  }
+}
